@@ -17,7 +17,9 @@ class App extends Component {
         }
     }
   render() {
-        let todos=this.state.todoList.map((item,index)=>{
+        let todos=this.state.todoList
+          .filter((item)=>!item.deleted)
+          .map((item,index)=>{
             return(
                 <li key={index}>
                     <TodoItem todo={item} onToggle={this.toggle.bind(this)}
@@ -33,11 +35,11 @@ class App extends Component {
                 onChange={this.changeTitle.bind(this)}
                 onSubmit={this.addTodo.bind(this)}/>
           </div>
-          <ol>
+          <ol className="todoList">
               {todos}
           </ol>
       </div>
-    );
+    )
   }
 
   toggle(e,todo){
@@ -45,16 +47,26 @@ class App extends Component {
       this.setState(this.state)
   }
 
-  changTitle(event){
+  changeTitle(event){
         this.setState({
             newTodo:event.target.value,
             todoList:this.state.todoList
         })
   }
 
-
-  addTodo(){
+  addTodo(event){
         console.log('我得添加一个todo了')
+      this.state.todoList.push({
+          id:idMaker(),
+          title:event.target.value,
+          status:null,
+          deleted:false
+      })
+
+      this.setState({
+          newTodo:'',
+          todoList:this.state.todoList
+      })
   }
 
   delete(event,todo){
@@ -66,3 +78,11 @@ class App extends Component {
 
 
 export default App;
+
+let id=0
+
+function idMaker() {
+    id+=1
+    return id
+
+}
