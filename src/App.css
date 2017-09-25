@@ -18,4 +18,16 @@
   background: transparent
 }
 
+.App>h1{
+    position: relative;
+    font-size:28px;
+}
+
+.App>h1>button{
+    display:inline-block;
+    position: absolute;
+    right:15px;
+    font-size:16px;
+}
+
 
