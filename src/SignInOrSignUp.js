@@ -25,7 +25,7 @@ export default class SignInOrSignUp extends Component{
                                checked={this.state.selected==='signUp'}
                                onChange={this.switch.bind(this)}
                         /> 注册</label>
-                    <label >
+                    <label>
                         <input  type='radio' value='signIn'
                                 checked={this.state.selected==='signIn'}
                                 onChange={this.switch.bind(this)}

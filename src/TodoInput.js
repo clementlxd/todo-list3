@@ -19,6 +19,7 @@ export default function (props) {
     return <input type='text' value={props.content}
         className='TodoInput'
         onChange={changeTitle.bind(null,props)}
-        onKeyPress={submit.bind(null,props)}/>
+        onKeyPress={submit.bind(null,props)}
+        placeholder='新增一条待办'/>
 
 }

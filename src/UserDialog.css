@@ -1,39 +1,85 @@
 .UserDialog-Wrapper{
   /*全屏*/      position: fixed; top: 0; left: 0; bottom: 0; right: 0;
   /*内容居中*/  display: flex; justify-content: center; align-items: center;
-  background: hsla(0,0%,0%,0.40);
+  background-color:#399FE4; /*hsla(0,0%,0%,0.40)*/
 }
 .UserDialog{
   border-radius: 4px;
   min-width: 20em;
   background: white;
-  border: 1px solid #aaa;
+  border: 1px solid #fff;
   box-shadow: 0 0 1em hsla(0,0%,0%,0.35);
-}
-.UserDialog .signInOrSignUp > nav:first-child{ padding: 1em; margin-left: -2em;}
-.UserDialog .signInOrSignUp > nav:first-child label{ margin-left: 2em; cursor: pointer;}
-.UserDialog .signInOrSignUp > .panes { padding: 0 1em 1em; }
 
-.UserDialog .forgotPassword > h3 {padding:1em;  }
-.UserDialog .forgotPassword > form { padding: 0 1em 1em; }
-.UserDialog form>.row{ display: flex; padding: .3em 0; }
-.UserDialog form>.row>label:first-child{ width: 4em; }
-.UserDialog form>.row.actions{
-  padding-left: 4em;
-  display: flex;
-  align-items: center;
 }
 
-.UserDialog form>.row.actions button{
-  margin-right:0.5em;
+.UserDialog>h1{
+  text-align: center;
+  color:#399FE4;
 }
-.UserDialog button{
-  font:inherit;
-  padding: .2em;
+
+.signInOrSignUp input[type='radio']{
+  display: none;
+
+}
+
+.signInOrSignUp input{
+  line-height:24px;
+}
+
+.UserDialog .signInOrSignUp>nav>label{
+  font-size:18px;
+  display:inline-block;
+  width:55px;
+  cursor: pointer;
+
+}
+
+.UserDialog .signInOrSignUp>nav>label:hover{
+color:#399FE4;
 }
 
 
-label{
-  padding-right:10px;
+
+.UserDialog .signInOrSignUp>nav>label:first-child{
+ margin-left:35%;
 }
+
+.UserDialog .signInOrSignUp>nav>label:last-child{
+  margin-right:20%;
+}
+
+
+.UserDialog form>.row{
+  text-align: center;
+  margin:15px 0;
+  font-size:16px;
+}
+
+.actions button{
+  list-style: none;
+  box-shadow: none;
+  display:inline-block;
+  width:70px;
+  height:35px;
+  margin-bottom:20px;
+  border-radius:4px;
+  background-color: #399FE4;
+  color:white;
+  border:none;
+
+}
+
+.actions button:hover{
+  cursor: pointer;
+}
+
+.actions a{
+  display:inline-block;
+  margin-bottom:15px;
+  text-decoration: none;
+}
+
+
+
+
 

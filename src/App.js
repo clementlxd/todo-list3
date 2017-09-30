@@ -15,7 +15,7 @@ class App extends Component {
         super(props)
         this.state={
             user:getCurrentUser()||{},
-            newTodo:'test',
+            newTodo:'',
             todoList:[]
         }
         let user=getCurrentUser()
@@ -40,8 +40,8 @@ class App extends Component {
         })
     return (
       <div className="App">
-          <h1>{this.state.user.username||'我'}的待办
-              {this.state.user.id? <button onClick={this.signOut.bind(this)}>登出</button>:null}
+          <h1 >{this.state.user.username||'我'}的待办
+              {this.state.user.id? <button className='iconfont-quit' onClick={this.signOut.bind(this)  }> &#xe657;</button>:null}
 
           </h1>
           <div className='inputWrapper'>
@@ -67,6 +67,7 @@ class App extends Component {
       let stateCopy=JSON.parse(JSON.stringify(this.state))
       stateCopy.user={}
       this.setState(stateCopy)
+
   }
 
 

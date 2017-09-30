@@ -3,10 +3,10 @@
   border: 1px solid #aaa;
   border-radius: 4px;
   background: white;
- margin: 2em;
+  margin: 2em;
   padding: 0 1em;
   min-height: 20em;
-  min-width: 32em;
+  min-width: 42em;
   box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
 }
 
@@ -26,8 +26,31 @@
 .App>h1>button{
     display:inline-block;
     position: absolute;
-    right:15px;
-    font-size:16px;
+    right:7px;
+    top:5px;
 }
 
 
+@font-face {
+    font-family: 'iconfont';  /* project id 349599 */
+    src: url('//at.alicdn.com/t/font_349599_ca588hhb12p7rpb9.eot');
+    src: url('//at.alicdn.com/t/font_349599_ca588hhb12p7rpb9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_349599_ca588hhb12p7rpb9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_349599_ca588hhb12p7rpb9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_349599_ca588hhb12p7rpb9.svg#iconfont') format('svg');
+}
+
+.iconfont-quit{
+    font-family:"iconfont" !important;
+    font-size:20px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    border:none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.iconfont-quit:hover{
+    color:red;
+}

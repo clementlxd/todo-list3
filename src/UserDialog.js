@@ -21,6 +21,7 @@ export default class UserDialog extends Component{
 
     signUp(e){
         e.preventDefault()
+
         let {email,username,password}=this.state.formData
         let success=(user)=>{
             this.props.onSignUp.call(null,user)
@@ -41,6 +42,7 @@ export default class UserDialog extends Component{
     }
     signIn(e){
         e.preventDefault()
+
         let {username,password}=this.state.formData
         let success=(user)=>{
             this.props.onSignIn.call(null,user)
@@ -57,6 +59,7 @@ export default class UserDialog extends Component{
 
         }
         signIn(username,password,success,error)
+        //this.forceUpdate()
     }
 
 
@@ -71,6 +74,7 @@ export default class UserDialog extends Component{
         return (
             <div className='UserDialog-Wrapper'>
                 <div className='UserDialog'>
+                    <h1>My Todos</h1>
                     {this.state.selectedTab==='signInOrSignUp'?
                         <SignInOrSignUp
                           formData={this.state.formData}
